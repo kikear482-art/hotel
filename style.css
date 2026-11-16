@@ -1,0 +1,1021 @@
+
+/* =====================================
+   HOTEL SOCAVÓN
+   DISEÑO COLONIAL CONTEMPORÁNEO
+===================================== */
+
+
+/* CONFIGURACIÓN GENERAL */
+
+:root {
+    --green: #183c32;
+    --green-light: #294e42;
+    --gold: #b99a63;
+    --cream: #f5f2eb;
+    --white: #ffffff;
+    --dark: #20251f;
+    --gray: #77776f;
+
+    --heading: 'Cormorant Garamond', serif;
+    --body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: var(--body);
+    color: var(--dark);
+    background: var(--cream);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =====================================
+   ENCABEZADO
+===================================== */
+
+.header {
+    width: 100%;
+    min-height: 105px;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--cream);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3px;
+}
+
+.logo-small {
+    font-size: 8px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.logo-name {
+    font-family: var(--heading);
+    font-size: 33px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 2px;
+}
+
+.logo-location {
+    font-size: 8px;
+    letter-spacing: 4px;
+    color: var(--gray);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.navigation a {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    color: var(--gold);
+}
+
+.navigation .nav-button {
+    background: var(--green);
+    color: white;
+    padding: 16px 23px;
+}
+
+.navigation .nav-button:hover {
+    background: var(--gold);
+    color: white;
+}
+
+
+/* =====================================
+   PORTADA PRINCIPAL
+===================================== */
+
+.hero {
+    min-height: 680px;
+    height: 85vh;
+    max-height: 850px;
+
+    position: relative;
+
+    background-image: url("FOTO HOTEL 3.jpg");
+    background-size: cover;
+    background-position: center 45%;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13, 34, 27, .85) 0%,
+            rgba(13, 34, 27, .62) 48%,
+            rgba(13, 34, 27, .12) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    padding: 0 10%;
+}
+
+.hero-subtitle {
+    display: block;
+    color: #e4c991;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: var(--heading);
+    font-size: clamp(65px, 8vw, 110px);
+    font-weight: 500;
+    line-height: .92;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #d7bb86;
+    font-style: italic;
+}
+
+.hero-content > p {
+    max-width: 510px;
+    font-size: 13px;
+    line-height: 2;
+    font-weight: 300;
+    color: rgba(255,255,255,.88);
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.button {
+    min-height: 55px;
+    padding: 0 27px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: .3s;
+}
+
+.button-primary {
+    background: var(--gold);
+    color: white;
+}
+
+.button-primary:hover {
+    background: white;
+    color: var(--green);
+    transform: translateY(-3px);
+}
+
+.button-outline {
+    border: 1px solid rgba(255,255,255,.7);
+    color: white;
+}
+
+.button-outline:hover {
+    background: white;
+    color: var(--green);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 8%;
+    right: 8%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,.8);
+}
+
+
+/* =====================================
+   PRESENTACIÓN
+===================================== */
+
+.section-padding {
+    padding: 120px 12%;
+}
+
+.intro {
+    position: relative;
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 70px;
+    background: var(--cream);
+    overflow: hidden;
+}
+
+.intro-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gold);
+
+    margin-top: 20px;
+}
+
+.gold-line {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+}
+
+.intro-content h2,
+.experience-content h2,
+.location-content h2 {
+    font-family: var(--heading);
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--green);
+    margin-bottom: 30px;
+}
+
+.intro-content h2 span,
+.experience-content h2 span,
+.location-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.intro-content p,
+.experience-content > p,
+.location-content > p {
+    font-size: 12px;
+    line-height: 2.1;
+    color: #77766f;
+    margin-bottom: 20px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--gold);
+    transition: .3s;
+}
+
+.text-link:hover {
+    color: var(--gold);
+}
+
+.intro-decoration {
+    position: absolute;
+    bottom: -80px;
+    left: 5%;
+    font-family: var(--heading);
+    font-size: 170px;
+    font-weight: 700;
+    color: rgba(24,60,50,.025);
+    pointer-events: none;
+}
+
+
+/* =====================================
+   EXPERIENCIA
+===================================== */
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 720px;
+    background: var(--green);
+}
+
+.experience-image {
+    background-image: url("FOTO HOTEL 3.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 650px;
+}
+
+.experience-content {
+    padding: 100px 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.section-kicker {
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.experience-content h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.experience-content > p {
+    color: rgba(255,255,255,.7);
+    margin-bottom: 35px;
+}
+
+.experience-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.detail-number {
+    font-family: var(--heading);
+    font-size: 32px;
+    color: var(--gold);
+}
+
+.experience-detail h3 {
+    font-family: var(--heading);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.experience-detail p {
+    font-size: 10px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.65);
+}
+
+
+/* =====================================
+   FRASE DESTACADA
+===================================== */
+
+.quote-section {
+    padding: 110px 20px;
+    text-align: center;
+    background: #eae5da;
+}
+
+.quote-symbol {
+    display: block;
+    font-family: var(--heading);
+    font-size: 95px;
+    line-height: .8;
+    color: var(--gold);
+}
+
+.quote-section h2 {
+    font-family: var(--heading);
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.05;
+    font-weight: 500;
+    color: var(--green);
+}
+
+.quote-section h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.quote-section p {
+    margin-top: 30px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #77766f;
+}
+
+
+/* =====================================
+   UBICACIÓN
+===================================== */
+
+.location {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+    background: var(--cream);
+}
+
+.location-content h2 {
+    font-size: 75px;
+}
+
+.location-address {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 35px 0;
+    padding: 20px 0;
+    border-top: 1px solid #ded9ce;
+    border-bottom: 1px solid #ded9ce;
+}
+
+.location-icon {
+    font-size: 38px;
+    color: var(--gold);
+}
+
+.location-address strong {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--green);
+}
+
+.location-address p {
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 7px;
+}
+
+.button-dark {
+    background: var(--green);
+    color: white;
+}
+
+.button-dark:hover {
+    background: var(--gold);
+    transform: translateY(-3px);
+}
+
+.location-image {
+    position: relative;
+    min-height: 520px;
+    background-image: url("FOTO HOTEL 3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.location-image-caption {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    background: rgba(24,60,50,.9);
+    padding: 25px;
+    color: white;
+}
+
+.location-image-caption span {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+.location-image-caption p {
+    font-family: var(--heading);
+    font-size: 29px;
+    margin-top: 5px;
+}
+
+
+/* =====================================
+   RESERVACIONES
+===================================== */
+
+.booking {
+    position: relative;
+    min-height: 550px;
+
+    background-image: url("FOTO HOTEL 3.jpg");
+    background-size: cover;
+    background-position: center 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+.booking-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(16,43,34,.85);
+}
+
+.booking-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    padding: 70px 20px;
+}
+
+.booking-content h2 {
+    font-family: var(--heading);
+    font-size: clamp(60px, 7vw, 85px);
+    font-weight: 500;
+    line-height: .95;
+    margin-bottom: 25px;
+}
+
+.booking-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.booking-content > p {
+    max-width: 500px;
+    margin: 0 auto 35px;
+    font-size: 12px;
+    line-height: 2;
+    color: rgba(255,255,255,.8);
+}
+
+.booking-note {
+    display: block;
+    margin-top: 30px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+.footer {
+    background: #122d25;
+    color: white;
+    padding: 75px 10% 0;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-logo {
+    display: block;
+    font-family: var(--heading);
+    font-size: 34px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    max-width: 280px;
+    font-size: 11px;
+    line-height: 2;
+    color: rgba(255,255,255,.6);
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-contact p {
+    font-size: 11px;
+    color: rgba(255,255,255,.7);
+    transition: .3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--gold);
+}
+
+.footer-message {
+    border-top: 1px solid rgba(255,255,255,.12);
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    padding: 35px 15px;
+    text-align: center;
+}
+
+.footer-message p {
+    max-width: 750px;
+    margin: auto;
+    font-family: var(--heading);
+    font-size: 26px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #d9c8a7;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,.5);
+}
+
+.footer-bottom a {
+    transition: .3s;
+}
+
+.footer-bottom a:hover {
+    color: var(--gold);
+}
+
+
+/* =====================================
+   BOTÓN FLOTANTE WHATSAPP
+===================================== */
+
+.whatsapp-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 100;
+
+    width: 62px;
+    height: 62px;
+
+    background: #25d366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,.2);
+
+    transition: .3s;
+}
+
+.whatsapp-button svg {
+    width: 34px;
+    height: 34px;
+    fill: white;
+}
+
+.whatsapp-button span {
+    position: absolute;
+    right: 75px;
+
+    background: white;
+    color: var(--green);
+
+    padding: 12px 16px;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.whatsapp-button:hover {
+    background: #1eae53;
+    transform: scale(1.08);
+}
+
+.whatsapp-button:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =====================================
+   RESPONSIVE - TABLETS
+===================================== */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .navigation {
+        gap: 18px;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+
+    .section-padding {
+        padding: 90px 8%;
+    }
+
+    .intro {
+        gap: 35px;
+    }
+
+    .experience-content {
+        padding: 75px 9%;
+    }
+
+    .location {
+        gap: 40px;
+    }
+
+    .location-content h2 {
+        font-size: 60px;
+    }
+
+}
+
+
+/* =====================================
+   RESPONSIVE - CELULARES
+===================================== */
+
+@media (max-width: 700px) {
+
+    html {
+        scroll-padding-top: 0;
+    }
+
+    .header {
+        min-height: auto;
+        padding: 22px 15px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo-name {
+        font-size: 30px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px 20px;
+    }
+
+    .navigation a {
+        font-size: 8px;
+    }
+
+    .navigation .nav-button {
+        padding: 12px 15px;
+    }
+
+    .hero {
+        height: 720px;
+        min-height: 600px;
+        max-height: none;
+        background-position: 55% center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(13,34,27,.82),
+            rgba(13,34,27,.48)
+        );
+    }
+
+    .hero-content {
+        padding: 0 8%;
+    }
+
+    .hero-subtitle {
+        font-size: 9px;
+        letter-spacing: 3px;
+        line-height: 2;
+    }
+
+    .hero h1 {
+        font-size: 72px;
+    }
+
+    .hero-content > p {
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .hero-bottom {
+        left: 8%;
+        right: 8%;
+        font-size: 7px;
+        letter-spacing: 1px;
+        gap: 15px;
+    }
+
+    .section-padding {
+        padding: 75px 8%;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .intro-label {
+        margin-top: 0;
+        font-size: 8px;
+    }
+
+    .intro-content h2,
+    .experience-content h2 {
+        font-size: 48px;
+    }
+
+    .intro-decoration {
+        font-size: 100px;
+    }
+
+    .experience {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-image {
+        min-height: 400px;
+        background-position: center;
+    }
+
+    .experience-content {
+        padding: 75px 8%;
+    }
+
+    .quote-section {
+        padding: 80px 15px;
+    }
+
+    .quote-section h2 {
+        font-size: 48px;
+    }
+
+    .quote-section p {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .location {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .location-content h2 {
+        font-size: 62px;
+    }
+
+    .location-image {
+        min-height: 400px;
+    }
+
+    .booking {
+        min-height: 500px;
+    }
+
+    .booking-content h2 {
+        font-size: 65px;
+    }
+
+    .footer {
+        padding: 60px 8% 0;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-message p {
+        font-size: 23px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+        line-height: 1.8;
+    }
+
+    .whatsapp-button {
+        width: 56px;
+        height: 56px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .whatsapp-button span {
+        display: none;
+    }
+
+}
+
+
+/* =====================================
+   PANTALLAS PEQUEÑAS
+===================================== */
+
+@media (max-width: 380px) {
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-bottom {
+        font-size: 6px;
+    }
+
+    .quote-section h2 {
+        font-size: 40px;
+    }
+
+}
